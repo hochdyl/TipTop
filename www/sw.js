@@ -5,7 +5,7 @@ const CACHED_FILES = [
   OFFLINE_URL,
   `${ORIGIN_URL}/lib/bootstrap-5.1.3/css/bootstrap.min.css`,
   `${ORIGIN_URL}/lib/bootstrap-5.1.3/js/bootstrap.bundle.min.js`,
-  `${ORIGIN_URL}/css/index.css`,
+  `${ORIGIN_URL}/css/style.css`,
   `${ORIGIN_URL}/js/index.js`,
   `${ORIGIN_URL}/img/logo.png`,
 ];

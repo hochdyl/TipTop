@@ -1,0 +1,33 @@
+@import "breakpoints";
+@import "colors";
+
+body { background-color: $bgd-color !important; }
+
+header {
+    color: #FFFFFF;
+    padding: 1em;
+    background-color: $fst-color;
+    display: flex;
+    justify-content: center;
+    @include sm { justify-content: start; }
+
+    img { width: 3em; }
+
+    h1 { 
+        display: none;
+        @include sm { display: inline-block; }
+    }
+}
+
+main {
+    padding: 2em;
+
+    article {
+        padding: 1em;
+        background-color: $scd-color;
+        border-radius: 0.5em;
+        color: #FFFFFF;
+
+        h2 { font-size: calc(1rem + .9vw) !important; }
+    }
+}
