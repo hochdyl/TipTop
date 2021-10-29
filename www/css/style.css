@@ -2,9 +2,13 @@ body {
   background-color: #2A2A32 !important;
 }
 
+h1 {
+  font-size: calc(0.7rem + 1.5vw) !important;
+}
+
 header {
   color: #FFFFFF;
-  padding: 1em;
+  padding: 0.5em 1em;
   background-color: #2E2E38;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,6 +16,9 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 3em;
 }
 
 @media (min-width: 36em) {
@@ -22,22 +29,50 @@ header {
   }
 }
 
-header img {
-  width: 3em;
-}
-
-header h1 {
+header h4 {
   display: none;
 }
 
 @media (min-width: 36em) {
-  header h1 {
+  header h4 {
     display: inline-block;
+    padding-left: 0.5em;
   }
 }
 
 main {
-  padding: 2em;
+  padding: 5em 2em 2em 2em;
+}
+
+@media (min-width: 36em) {
+  main {
+    padding: 6em 3em 3em 3em;
+  }
+}
+
+@media (min-width: 48em) {
+  main {
+    padding: 7em 5em 4em 5em;
+  }
+}
+
+@media (min-width: 62em) {
+  main {
+    padding: 7em 10em 4em 10em;
+  }
+}
+
+@media (min-width: 75em) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 7em 10em 4em 10em;
+  }
 }
 
 main article {
@@ -45,9 +80,24 @@ main article {
   background-color: #423E63;
   border-radius: 0.5em;
   color: #FFFFFF;
+  margin-bottom: 1em;
+}
+
+main article:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 75em) {
+  main article {
+    width: calc(50% - 1em);
+    margin-right: 1em;
+  }
+  main article:last-child, main article:nth-last-child(2) {
+    margin-bottom: 0;
+  }
 }
 
 main article h2 {
-  font-size: calc(1rem + .9vw) !important;
+  font-size: calc(0.5rem + .9vw) !important;
 }
 /*# sourceMappingURL=style.css.map */

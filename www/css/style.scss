@@ -3,31 +3,49 @@
 
 body { background-color: $bgd-color !important; }
 
+h1 { font-size: calc(0.7rem + 1.5vw) !important; }
+
 header {
     color: #FFFFFF;
-    padding: 1em;
+    padding: 0.5em 1em;
     background-color: $fst-color;
     display: flex;
     justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 3em;
     @include sm { justify-content: start; }
 
-    img { width: 3em; }
-
-    h1 { 
+    h4 { 
         display: none;
-        @include sm { display: inline-block; }
+        @include sm { display: inline-block; padding-left: 0.5em; }
     }
 }
 
 main {
-    padding: 2em;
+    padding: 5em 2em 2em 2em;
+    @include sm { padding: 6em 3em 3em 3em; }
+    @include md { padding: 7em 5em 4em 5em; }
+    @include lg { padding: 7em 10em 4em 10em; }
+    @include xl { 
+        display: flex;
+        flex-flow: row wrap;
+        padding: 7em 10em 4em 10em; 
+    }
 
     article {
         padding: 1em;
         background-color: $scd-color;
         border-radius: 0.5em;
         color: #FFFFFF;
+        margin-bottom: 1em;
+        &:last-child { margin-bottom: 0;}
+        @include xl { 
+            width: calc(50% - 1em);
+            margin-right: 1em;
+            &:last-child, &:nth-last-child(2) { margin-bottom: 0; }
+        }
 
-        h2 { font-size: calc(1rem + .9vw) !important; }
+        h2 { font-size: calc(0.5rem + .9vw) !important; }
     }
 }
