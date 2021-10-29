@@ -1,7 +1,10 @@
 window.addEventListener("load", () => {
-  if (!"cordova" in window && "serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("sw.js", { scope: ".././" })
-      .then(function (reg) {});
+  if ("cordova" in window) {
+  } else {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("sw.js", { scope: `${location.host}/` })
+        .then(function (reg) {});
+    }
   }
-});
+})
