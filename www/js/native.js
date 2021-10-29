@@ -1,4 +1,4 @@
-const deviceReady = () => {
+const loadNative = () => {
   
 
   // window.screen.orientation.lock("landscape");

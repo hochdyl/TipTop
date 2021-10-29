@@ -28,7 +28,7 @@ var app = {
       );
     },
     onDeviceReady: function () {
-      deviceReady();
+      loadNative();
     },
 };
   

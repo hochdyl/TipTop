@@ -1,3 +1,8 @@
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 body {
   background-color: #2A2A32 !important;
 }

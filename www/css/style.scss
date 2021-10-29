@@ -1,6 +1,8 @@
 @import "breakpoints";
 @import "colors";
 
+* { transition: 0.3s; }
+
 body { background-color: $bgd-color !important; }
 
 h1 { font-size: calc(0.7rem + 1.5vw) !important; }

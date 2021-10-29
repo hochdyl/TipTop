@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Marques de téléphone",
+    "title": "Marques de téléphone",
     "description": "Les meilleures marques de téléphone",
     "author": "Dylan",
     "created_at": "29/10/2021",
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "name": "Les couleurs",
+    "title": "Les couleurs",
     "description": "Le top des couleurs",
     "author": "Rémi",
     "created_at": "26/10/2021",
