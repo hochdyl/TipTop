@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Marques de téléphone",
+    "description": "Les meilleures marques de téléphone",
+    "author": "Dylan",
+    "created_at": "29/10/2021",
+    "list": [
+      {
+        "name": "Iphone",
+        "position": 1,
+        "image": "iphone.png"
+      },
+      {
+        "name": "Samsung",
+        "position": 2,
+        "image": "iphone.png"
+      },
+      {
+        "name": "Huawei",
+        "position": 3,
+        "image": "iphone.png"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Les couleurs",
+    "description": "Le top des couleurs",
+    "author": "Rémi",
+    "created_at": "26/10/2021",
+    "list": [
+      {
+        "name": "Orange",
+        "position": 1,
+        "image": "orange.png"
+      },
+      {
+        "name": "Bleu",
+        "position": 2,
+        "image": "bleu.png"
+      },
+      {
+        "name": "Vert",
+        "position": 3,
+        "image": "vert.png"
+      },
+      {
+        "name": "Rouge",
+        "position": 4,
+        "image": "bleu.png"
+      },
+      {
+        "name": "Violet",
+        "position": 5,
+        "image": "violet.png"
+      }
+    ]
+  }
+]

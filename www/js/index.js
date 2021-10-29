@@ -30,7 +30,7 @@ var app = {
     onDeviceReady: function () {
       deviceReady();
     },
-  };
+};
   
-  app.initialize();
+app.initialize();
   
