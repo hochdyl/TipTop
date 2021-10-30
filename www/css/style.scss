@@ -1,5 +1,6 @@
 @import "breakpoints";
 @import "colors";
+@import "keyframes";
 
 * { transition: 0.3s; }
 
@@ -7,47 +8,57 @@ body { background-color: $bgd-color !important; }
 
 h1 { font-size: calc(0.7rem + 1.5vw) !important; }
 
-header {
-    color: #FFFFFF;
-    padding: 0.5em 1em;
-    background-color: $fst-color;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    height: 3em;
-    @include sm { justify-content: start; }
-
-    h4 { 
-        display: none;
-        @include sm { display: inline-block; padding-left: 0.5em; }
-    }
-}
-
 main {
-    padding: 5em 2em 2em 2em;
-    @include sm { padding: 6em 3em 3em 3em; }
-    @include md { padding: 7em 5em 4em 5em; }
-    @include lg { padding: 7em 10em 4em 10em; }
-    @include xl { 
+    header {
+        color: #FFFFFF;
+        padding: 0.5em 1em;
+        background-color: $fst-color;
         display: flex;
-        flex-flow: row wrap;
-        padding: 7em 10em 4em 10em; 
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 3em;
+        @include sm { justify-content: start; }
+    
+        h4 { 
+            display: none;
+            @include sm { display: inline-block; padding-left: 0.5em; }
+        }
     }
 
-    article {
-        padding: 1em;
-        background-color: $scd-color;
-        border-radius: 0.5em;
-        color: #FFFFFF;
-        margin-bottom: 1em;
-        &:last-child { margin-bottom: 0;}
+    section {
+        padding: 5em 2em 2em 2em;
+        @include sm { padding: 6em 10em 3em 10em; }
+        @include lg { padding: 7em 10em 4em 10em; }
         @include xl { 
-            width: calc(50% - 1em);
-            margin-right: 1em;
-            &:last-child, &:nth-last-child(2) { margin-bottom: 0; }
+            display: flex;
+            flex-flow: row wrap;
+            padding: 7em 10em 4em 10em; 
         }
-
-        h2 { font-size: calc(0.5rem + .9vw) !important; }
+        
+        article {
+            padding: 1em;
+            background-color: $scd-color;
+            border-radius: 0.5em;
+            color: #FFFFFF;
+            margin-bottom: 1em;
+            &:last-child { margin-bottom: 0;}
+            @include xl { 
+                width: calc(50% - 1em);
+                margin-right: 1em;
+                &:last-child, &:nth-last-child(2) { margin-bottom: 0; }
+            }
+    
+            h2 { font-size: calc(0.5rem + .9vw) !important; }
+        }
+    
+        i {
+            position: fixed;
+            bottom: 0.7em;
+            right: 0.7em;
+            border-radius: 50%;
+            color: #FFFFFF;
+            &:hover, &:focus { animation: pulse 0.8s; color: #AAAAAA; }
+        }
     }
 }

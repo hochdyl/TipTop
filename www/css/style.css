@@ -1,3 +1,25 @@
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+  }
+}
+
 * {
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -11,7 +33,7 @@ h1 {
   font-size: calc(0.7rem + 1.5vw) !important;
 }
 
-header {
+main header {
   color: #FFFFFF;
   padding: 0.5em 1em;
   background-color: #2E2E38;
@@ -27,48 +49,42 @@ header {
 }
 
 @media (min-width: 36em) {
-  header {
+  main header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
 }
 
-header h4 {
+main header h4 {
   display: none;
 }
 
 @media (min-width: 36em) {
-  header h4 {
+  main header h4 {
     display: inline-block;
     padding-left: 0.5em;
   }
 }
 
-main {
+main section {
   padding: 5em 2em 2em 2em;
 }
 
 @media (min-width: 36em) {
-  main {
-    padding: 6em 3em 3em 3em;
-  }
-}
-
-@media (min-width: 48em) {
-  main {
-    padding: 7em 5em 4em 5em;
+  main section {
+    padding: 6em 10em 3em 10em;
   }
 }
 
 @media (min-width: 62em) {
-  main {
+  main section {
     padding: 7em 10em 4em 10em;
   }
 }
 
 @media (min-width: 75em) {
-  main {
+  main section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -80,7 +96,7 @@ main {
   }
 }
 
-main article {
+main section article {
   padding: 1em;
   background-color: #423E63;
   border-radius: 0.5em;
@@ -88,21 +104,35 @@ main article {
   margin-bottom: 1em;
 }
 
-main article:last-child {
+main section article:last-child {
   margin-bottom: 0;
 }
 
 @media (min-width: 75em) {
-  main article {
+  main section article {
     width: calc(50% - 1em);
     margin-right: 1em;
   }
-  main article:last-child, main article:nth-last-child(2) {
+  main section article:last-child, main section article:nth-last-child(2) {
     margin-bottom: 0;
   }
 }
 
-main article h2 {
+main section article h2 {
   font-size: calc(0.5rem + .9vw) !important;
+}
+
+main section i {
+  position: fixed;
+  bottom: 0.7em;
+  right: 0.7em;
+  border-radius: 50%;
+  color: #FFFFFF;
+}
+
+main section i:hover, main section i:focus {
+  -webkit-animation: pulse 0.8s;
+          animation: pulse 0.8s;
+  color: #AAAAAA;
 }
 /*# sourceMappingURL=style.css.map */
