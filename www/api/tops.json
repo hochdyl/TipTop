@@ -1,6 +1,40 @@
 [
   {
     "id": 1,
+    "title": "Les chats",
+    "description": "Les meilleures races de chats",
+    "author": "Dylan",
+    "created_at": "01/11/2021",
+    "list": [
+      {
+        "name": "Ragdoll",
+        "position": 1,
+        "file": "1200px-Ragdoll,_seal_mitted.jfif"
+      },
+      {
+        "name": "British Shorthair",
+        "position": 2,
+        "file": "british-shorthair-01.webp"
+      },
+      {
+        "name": "Persan",
+        "position": 3,
+        "file": "chat_persan_assurance_santevet.jpg"
+      },
+      {
+        "name": "Maie Coon",
+        "position": 4,
+        "file": "Maine_Coon_assurance_santevet.jpg"
+      },
+      {
+        "name": "Siamois",
+        "position": 5,
+        "file": "siamois1-fb-58527a52d57bb.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
     "title": "Marques de téléphone",
     "description": "Les meilleures marques de téléphone",
     "author": "Dylan",
@@ -9,22 +43,22 @@
       {
         "name": "Iphone",
         "position": 1,
-        "image": "iphone.png"
+        "file": "iphone.png"
       },
       {
         "name": "Samsung",
         "position": 2,
-        "image": "iphone.png"
+        "file": "iphone.png"
       },
       {
         "name": "Huawei",
         "position": 3,
-        "image": "iphone.png"
+        "file": "iphone.png"
       }
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Les couleurs",
     "description": "Le top des couleurs",
     "author": "Rémi",
@@ -33,27 +67,27 @@
       {
         "name": "Orange",
         "position": 1,
-        "image": "orange.png"
+        "file": "orange.png"
       },
       {
         "name": "Bleu",
         "position": 2,
-        "image": "bleu.png"
+        "file": "bleu.png"
       },
       {
         "name": "Vert",
         "position": 3,
-        "image": "vert.png"
+        "file": "vert.png"
       },
       {
         "name": "Rouge",
         "position": 4,
-        "image": "bleu.png"
+        "file": "bleu.png"
       },
       {
         "name": "Violet",
         "position": 5,
-        "image": "violet.png"
+        "file": "violet.png"
       }
     ]
   }

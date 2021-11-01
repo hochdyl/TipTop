@@ -20,21 +20,17 @@
   }
 }
 
-* {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
 body {
   background-color: #2A2A32 !important;
+  color: #FFFFFF !important;
 }
 
 h1 {
   font-size: calc(0.7rem + 1.5vw) !important;
 }
 
-main header {
-  color: #FFFFFF;
+main nav {
+  z-index: 1;
   padding: 0.5em 1em;
   background-color: #2E2E38;
   display: -webkit-box;
@@ -49,80 +45,142 @@ main header {
 }
 
 @media (min-width: 36em) {
-  main header {
+  main nav {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
 }
 
-main header h4 {
+main nav span:hover, main nav img:hover {
+  cursor: pointer;
+}
+
+main nav span {
   display: none;
 }
 
 @media (min-width: 36em) {
-  main header h4 {
+  main nav span {
     display: inline-block;
     padding-left: 0.5em;
+    font-weight: 500;
+    font-size: 1.2em;
   }
 }
 
+main nav span:hover {
+  color: #AAAAAA;
+}
+
 main section {
-  padding: 5em 2em 2em 2em;
+  padding: 4em 2em 2em 2em;
 }
 
 @media (min-width: 36em) {
   main section {
-    padding: 6em 10em 3em 10em;
+    padding: 4em 5em 2em 5em;
+  }
+}
+
+@media (min-width: 48em) {
+  main section {
+    padding: 4em 7em 2em 7em;
   }
 }
 
 @media (min-width: 62em) {
   main section {
-    padding: 7em 10em 4em 10em;
+    padding: 4em 10em 2em 10em;
   }
 }
 
-@media (min-width: 75em) {
-  main section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    padding: 7em 10em 4em 10em;
-  }
+main #tops-page h1 {
+  text-align: center;
 }
 
-main section article {
+main #tops-page article {
   padding: 1em;
   background-color: #423E63;
   border-radius: 0.5em;
-  color: #FFFFFF;
   margin-bottom: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-main section article:last-child {
+main #tops-page article:last-child {
   margin-bottom: 0;
 }
 
-@media (min-width: 75em) {
-  main section article {
-    width: calc(50% - 1em);
-    margin-right: 1em;
-  }
-  main section article:last-child, main section article:nth-last-child(2) {
-    margin-bottom: 0;
-  }
+main #tops-page article:hover, main #tops-page article:focus {
+  background-color: #35334d;
+  cursor: pointer;
 }
 
-main section article h2 {
+main #tops-page article h2 {
   font-size: calc(0.5rem + .9vw) !important;
 }
 
-main section i {
+main #tops-page article h3 {
+  font-size: calc(0.5rem + .6vw) !important;
+}
+
+main #tops-page article h3:first-of-type {
+  font-style: italic;
+}
+
+main #view-page header {
+  display: initial;
+  position: initial;
+  z-index: 0;
+  background-color: #423E63;
+  margin-bottom: 2em;
+}
+
+main #view-page h2 {
+  font-size: calc(0.5rem + .9vw) !important;
+  margin-bottom: 0 !important;
+}
+
+main #view-page article {
+  border-radius: 0 0 0.5em 0.5em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 36em) {
+  main #view-page article {
+    margin-bottom: 3em;
+  }
+}
+
+@media (min-width: 62em) {
+  main #view-page article {
+    margin-bottom: 4em;
+  }
+}
+
+main #view-page article:last-child {
+  margin-bottom: 0;
+}
+
+main #view-page article h2 {
+  padding: 0.5em 1em;
+  background-color: #423E63;
+}
+
+main #view-page article img {
+  pointer-events: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+main i {
   position: fixed;
   bottom: 0.7em;
   right: 0.7em;
@@ -130,9 +188,13 @@ main section i {
   color: #FFFFFF;
 }
 
-main section i:hover, main section i:focus {
+main i:hover, main i:focus {
   -webkit-animation: pulse 0.8s;
           animation: pulse 0.8s;
   color: #AAAAAA;
+}
+
+main .hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

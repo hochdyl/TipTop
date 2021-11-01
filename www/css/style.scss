@@ -2,15 +2,13 @@
 @import "colors";
 @import "keyframes";
 
-* { transition: 0.3s; }
-
-body { background-color: $bgd-color !important; }
+body { background-color: $bgd-color !important; color: #FFFFFF !important; }
 
 h1 { font-size: calc(0.7rem + 1.5vw) !important; }
 
 main {
-    header {
-        color: #FFFFFF;
+    nav {
+        z-index: 1;
         padding: 0.5em 1em;
         background-color: $fst-color;
         display: flex;
@@ -19,46 +17,88 @@ main {
         width: 100%;
         height: 3em;
         @include sm { justify-content: start; }
+
+        span:hover, img:hover { cursor: pointer; }
     
-        h4 { 
+        span { 
             display: none;
-            @include sm { display: inline-block; padding-left: 0.5em; }
+            @include sm { 
+                display: inline-block; 
+                padding-left: 0.5em; 
+                font-weight: 500; 
+                font-size: 1.2em; 
+            }
+            &:hover { color: #AAAAAA; }
         }
     }
 
     section {
-        padding: 5em 2em 2em 2em;
-        @include sm { padding: 6em 10em 3em 10em; }
-        @include lg { padding: 7em 10em 4em 10em; }
-        @include xl { 
-            display: flex;
-            flex-flow: row wrap;
-            padding: 7em 10em 4em 10em; 
-        }
+        padding: 4em 2em 2em 2em;
+        @include sm { padding: 4em 5em 2em 5em; }
+        @include md { padding: 4em 7em 2em 7em; }
+        @include lg { padding: 4em 10em 2em 10em; }
+    }
         
+    #tops-page {
+        h1 { text-align: center; }
+
         article {
             padding: 1em;
             background-color: $scd-color;
             border-radius: 0.5em;
-            color: #FFFFFF;
             margin-bottom: 1em;
-            &:last-child { margin-bottom: 0;}
-            @include xl { 
-                width: calc(50% - 1em);
-                margin-right: 1em;
-                &:last-child, &:nth-last-child(2) { margin-bottom: 0; }
-            }
+            user-select: none;
+            &:last-child { margin-bottom: 0; }
+            &:hover, &:focus { background-color: $trd-color; cursor: pointer; }
     
             h2 { font-size: calc(0.5rem + .9vw) !important; }
-        }
-    
-        i {
-            position: fixed;
-            bottom: 0.7em;
-            right: 0.7em;
-            border-radius: 50%;
-            color: #FFFFFF;
-            &:hover, &:focus { animation: pulse 0.8s; color: #AAAAAA; }
+            
+            h3 { 
+                font-size: calc(0.5rem + .6vw) !important; 
+                &:first-of-type { font-style: italic; }
+            }
         }
     }
+
+    #view-page {
+        header {
+            display: initial;
+            position: initial;
+            z-index: 0;
+            background-color: $scd-color;
+            margin-bottom: 2em;
+        }
+
+        h2 { font-size: calc(0.5rem + .9vw) !important; margin-bottom: 0 !important; }
+
+        article {
+            border-radius: 0 0 0.5em 0.5em;
+            margin-bottom: 2em;
+            @include sm { margin-bottom: 3em; }
+            @include lg { margin-bottom: 4em; }
+            &:last-child { margin-bottom: 0; }
+
+            h2 { padding: 0.5em 1em; background-color: $scd-color; }
+
+            img {
+                pointer-events: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                object-fit: cover; 
+                max-width: 100%; 
+            }
+        }
+    }
+
+    i {
+        position: fixed;
+        bottom: 0.7em;
+        right: 0.7em;
+        border-radius: 50%;
+        color: #FFFFFF;
+        &:hover, &:focus { animation: pulse 0.8s; color: #AAAAAA; }
+    }
+
+    .hidden { display: none; }
 }

@@ -42,19 +42,27 @@
     </head>
     <body>
         <main>
-            <header>
+            <nav>
                 <img src="img/logo.png">
-                <h4>TipTop</h4>
-            </header>
-            <section id='tops-container'>
-                <!-- js/tops.js fills this container with an api call -->
-                <i class="fas fa-plus-circle fa-4x"></i>
+                <span>TipTop</span>
+            </nav>
+            <section id='tops-page' class="hidden">
+                <h1>Liste des tops</h1>
+                <!-- js/generator.js fills this container with an api call -->
+                <i class="fas fa-plus-circle fa-4x add-btn"></i>
+            </section>
+            <section id='view-page' class="hidden">
+            </section>
+            <section id='add-page' class="hidden">
+                <p>page 3</p>
             </section>
     
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
             <script type="text/javascript" src="js/native.js"></script>
-            <script type="text/javascript" src="js/tops.js"></script>
+            <script type="text/javascript" src="js/api.js"></script>
+            <script type="text/javascript" src="js/generator.js"></script>
+            <script type="text/javascript" src="js/app.js"></script>
         </main>
     </body>
 </html>
