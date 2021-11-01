@@ -26,6 +26,7 @@ APP = (() => {
 
       $(document).on("click", "nav img, nav span", function() {
         changePage(0);
+        topsPage(tops);
       });
     });
   };
@@ -33,6 +34,7 @@ APP = (() => {
   const changePage = (pageKey) => {
     pages.forEach(page => {
       page.addClass("hidden");
+      page.empty();
     });
     pages[pageKey].removeClass("hidden");
   }
