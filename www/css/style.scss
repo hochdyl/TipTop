@@ -36,16 +36,30 @@ main {
         padding: 4em 2em 2em 2em;
         @include sm { padding: 4em 5em 2em 5em; }
         @include md { padding: 4em 7em 2em 7em; }
-        @include lg { padding: 4em 10em 2em 10em; }
+        @include lg { padding: 4em 15em 2em 15em; }
+        @include xl { padding: 4em 25em 2em 25em; }
     }
         
     #tops-page {
+        input {
+            border-radius: 0.3em;
+            background-color: rgba($scd-color, 0.3);
+            width: 100%;
+            padding: 1em;
+            margin-bottom: 1em;
+            border: none;
+            color: #FFFFFF;
+            box-sizing: border-box;
+            &::placeholder { text-align: center; color: #AAAAAA; }
+            &:focus { outline: 0.1em solid $scd-color; }
+        }
+
         h1 { text-align: center; }
 
         article {
             padding: 1em;
             background-color: $scd-color;
-            border-radius: 0.5em;
+            border-radius: 0.3em;
             margin-bottom: 1em;
             user-select: none;
             &:last-child { margin-bottom: 0; }
@@ -62,23 +76,25 @@ main {
 
     #view-page {
         header {
-            display: initial;
             position: initial;
             z-index: 0;
             background-color: $scd-color;
             margin-bottom: 2em;
+            padding: 1em;
         }
 
         h2 { font-size: calc(0.5rem + .9vw) !important; margin-bottom: 0 !important; }
 
         article {
+            padding: 1em;
+            background-color: $fst-color;
             border-radius: 0 0 0.5em 0.5em;
             margin-bottom: 2em;
             @include sm { margin-bottom: 3em; }
             @include lg { margin-bottom: 4em; }
             &:last-child { margin-bottom: 0; }
 
-            h2 { padding: 0.5em 1em; background-color: $scd-color; }
+            h2 { padding: 0.5em 1em; background-color: $scd-color; margin-bottom: 1em !important; }
 
             img {
                 pointer-events: none;
@@ -87,6 +103,7 @@ main {
                 margin-right: auto;
                 object-fit: cover; 
                 max-width: 100%; 
+                max-height: 15em; 
             }
         }
     }

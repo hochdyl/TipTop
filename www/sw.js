@@ -3,10 +3,17 @@ const CACHE_NAME = "offline";
 const OFFLINE_URL = "offline.html";
 const CACHED_FILES = [
   OFFLINE_URL,
-  `${ORIGIN_URL}/lib/bootstrap-5.1.3/css/bootstrap.min.css`,
-  `${ORIGIN_URL}/lib/bootstrap-5.1.3/js/bootstrap.bundle.min.js`,
+  `${ORIGIN_URL}/libraries/bootstrap-5.1.3/css/bootstrap.min.css`,
+  `${ORIGIN_URL}/libraries/bootstrap-5.1.3/js/bootstrap.bundle.min.js`,
+  `${ORIGIN_URL}/libraries/fontawesome-5.15.4/fontawesome.js`,
+  `${ORIGIN_URL}/libraries/jquery-3.6.0/jquery-3.6.0.min.js`,
   `${ORIGIN_URL}/css/style.css`,
   `${ORIGIN_URL}/js/index.js`,
+  `${ORIGIN_URL}/js/api.js`,
+  `${ORIGIN_URL}/js/app.js`,
+  `${ORIGIN_URL}/js/generator.js`,
+  `${ORIGIN_URL}/js/header.js`,
+  `${ORIGIN_URL}/js/native.js`,
   `${ORIGIN_URL}/img/logo.png`,
 ];
 

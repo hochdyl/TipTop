@@ -35,25 +35,35 @@
   },
   {
     "id": 2,
-    "title": "Marques de téléphone",
-    "description": "Les meilleures marques de téléphone",
-    "author": "Dylan",
-    "created_at": "29/10/2021",
+    "title": "Les téléphones",
+    "description": "Les meilleures marques de téléphones",
+    "author": "Samuel",
+    "created_at": "03/11/2021",
     "list": [
       {
-        "name": "Iphone",
+        "name": "Samsung",
         "position": 1,
-        "file": "iphone.png"
+        "file": "samsung.png"
       },
       {
-        "name": "Samsung",
+        "name": "Apple",
         "position": 2,
-        "file": "iphone.png"
+        "file": "Apple_logo_black.svg.png"
       },
       {
         "name": "Huawei",
         "position": 3,
-        "file": "iphone.png"
+        "file": "Huawei-Logo.png"
+      },
+      {
+        "name": "Xiaomi",
+        "position": 4,
+        "file": "logo-Xiaomi.jpg"
+      },
+      {
+        "name": "Honor",
+        "position": 5,
+        "file": "Honor-Logo.png"
       }
     ]
   },
@@ -67,7 +77,7 @@
       {
         "name": "Orange",
         "position": 1,
-        "file": "orange.png"
+        "file": "orange.jpg"
       },
       {
         "name": "Bleu",
@@ -82,12 +92,12 @@
       {
         "name": "Rouge",
         "position": 4,
-        "file": "bleu.png"
+        "file": "rouge.jpg"
       },
       {
         "name": "Violet",
         "position": 5,
-        "file": "violet.png"
+        "file": "violet.webp"
       }
     ]
   }

@@ -91,8 +91,50 @@ main section {
 
 @media (min-width: 62em) {
   main section {
-    padding: 4em 10em 2em 10em;
+    padding: 4em 15em 2em 15em;
   }
+}
+
+@media (min-width: 75em) {
+  main section {
+    padding: 4em 25em 2em 25em;
+  }
+}
+
+main #tops-page input {
+  border-radius: 0.3em;
+  background-color: rgba(66, 62, 99, 0.3);
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  color: #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #tops-page input::-webkit-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main #tops-page input:-ms-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main #tops-page input::-ms-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main #tops-page input::placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main #tops-page input:focus {
+  outline: 0.1em solid #423E63;
 }
 
 main #tops-page h1 {
@@ -102,7 +144,7 @@ main #tops-page h1 {
 main #tops-page article {
   padding: 1em;
   background-color: #423E63;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   margin-bottom: 1em;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -132,11 +174,11 @@ main #tops-page article h3:first-of-type {
 }
 
 main #view-page header {
-  display: initial;
   position: initial;
   z-index: 0;
   background-color: #423E63;
   margin-bottom: 2em;
+  padding: 1em;
 }
 
 main #view-page h2 {
@@ -145,6 +187,8 @@ main #view-page h2 {
 }
 
 main #view-page article {
+  padding: 1em;
+  background-color: #2E2E38;
   border-radius: 0 0 0.5em 0.5em;
   margin-bottom: 2em;
 }
@@ -168,6 +212,7 @@ main #view-page article:last-child {
 main #view-page article h2 {
   padding: 0.5em 1em;
   background-color: #423E63;
+  margin-bottom: 1em !important;
 }
 
 main #view-page article img {
@@ -178,6 +223,7 @@ main #view-page article img {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
+  max-height: 15em;
 }
 
 main i {

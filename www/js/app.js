@@ -11,7 +11,8 @@ APP = (() => {
 
   const loadReady = () => {
     pages[currPage].removeClass("hidden");
-
+    searchBar();
+    
     getTops((tops) => {
       topsPage(tops);
       
@@ -37,7 +38,26 @@ APP = (() => {
       page.empty();
     });
     pages[pageKey].removeClass("hidden");
-  }
+  };
+
+  const searchBar = () => {
+    let input = $("#tops-page input");
+    input.on("keyup", () => { 
+      filter = input[0].value.toUpperCase();
+      article = $('#tops-page').find("article");
+      for (i = 0; i < article.length; i++) {
+        $(article[i]).children().each((key, value) => {
+          text = $(value).text();
+          if (text.toUpperCase().indexOf(filter) > -1) {
+            article[i].style.display = "";
+            return false;
+          } else {
+            article[i].style.display = "none";
+          }
+        });
+      }
+    });
+  };
 
   return { init };
 })();
