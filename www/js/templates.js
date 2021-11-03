@@ -5,7 +5,7 @@ const htmlToElement = (html) => {
   return template.content.firstChild;
 };
 
-const topsPage = (tops) => {
+const buildTopsPage = (tops) => {
   const container = document.getElementById("tops-container");
   getTemplate("tops/top.html", (template) => {
     tops.forEach((top) => {
@@ -20,12 +20,12 @@ const topsPage = (tops) => {
   });
 };
 
-const viewPage = (tops, topId) => {
+const buildViewPage = (tops, topId) => {
   let top;
   tops.forEach(element => {
     if (element.id == topId) top = element;
   });
-  const container = document.getElementById("view-page");
+  const container = document.getElementById("view-container");
   getTemplate("view/header.html", (template) => {
     let templateFilled = template
       .replace("{title}", top.title)
@@ -42,5 +42,15 @@ const viewPage = (tops, topId) => {
         .replace("{file}", `${top.id}/${element.file}`)
       container.appendChild(htmlToElement(templateFilled));
     });
+  });
+};
+
+const addMediaRow = (row) => {
+  const container = $("#media-table tbody").last()[0];
+  getTemplate("add/media-row.html", (template) => {
+    let templateFilled = template
+      .replace("{row}", row)
+      .replace("{row}", row)
+    container.appendChild(htmlToElement(templateFilled));
   });
 };

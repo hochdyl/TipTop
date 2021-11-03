@@ -20,6 +20,11 @@
   }
 }
 
+* {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 body {
   background-color: #2A2A32 !important;
   color: #FFFFFF !important;
@@ -101,47 +106,11 @@ main .page {
   }
 }
 
-main #tops-page input {
-  border-radius: 0.3em;
-  background-color: rgba(66, 62, 99, 0.3);
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: none;
-  color: #FFFFFF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-main #tops-page input::-webkit-input-placeholder {
-  text-align: center;
-  color: #AAAAAA;
-}
-
-main #tops-page input:-ms-input-placeholder {
-  text-align: center;
-  color: #AAAAAA;
-}
-
-main #tops-page input::-ms-input-placeholder {
-  text-align: center;
-  color: #AAAAAA;
-}
-
-main #tops-page input::placeholder {
-  text-align: center;
-  color: #AAAAAA;
-}
-
-main #tops-page input:focus {
-  outline: 0.1em solid #423E63;
-}
-
 main #tops-page h1 {
   text-align: center;
 }
 
-main #tops-page article {
+main #tops-page .top {
   padding: 1em;
   background-color: #423E63;
   border-radius: 0.3em;
@@ -152,24 +121,24 @@ main #tops-page article {
           user-select: none;
 }
 
-main #tops-page article:last-child {
+main #tops-page .top:last-child {
   margin-bottom: 0;
 }
 
-main #tops-page article:hover, main #tops-page article:focus {
+main #tops-page .top:hover, main #tops-page .top:focus {
   background-color: #35334d;
   cursor: pointer;
 }
 
-main #tops-page article h2 {
+main #tops-page .top h2 {
   font-size: calc(0.5rem + .9vw) !important;
 }
 
-main #tops-page article h3 {
+main #tops-page .top h3 {
   font-size: calc(0.5rem + .6vw) !important;
 }
 
-main #tops-page article h3:first-of-type {
+main #tops-page .top h3:first-of-type {
   font-style: italic;
 }
 
@@ -186,7 +155,7 @@ main #view-page h2 {
   margin-bottom: 0 !important;
 }
 
-main #view-page article {
+main #view-page .element {
   padding: 1em;
   background-color: #2E2E38;
   border-radius: 0 0 0.5em 0.5em;
@@ -194,28 +163,28 @@ main #view-page article {
 }
 
 @media (min-width: 36em) {
-  main #view-page article {
+  main #view-page .element {
     margin-bottom: 3em;
   }
 }
 
 @media (min-width: 62em) {
-  main #view-page article {
+  main #view-page .element {
     margin-bottom: 4em;
   }
 }
 
-main #view-page article:last-child {
+main #view-page .element:last-child {
   margin-bottom: 0;
 }
 
-main #view-page article h2 {
+main #view-page .element h2 {
   padding: 0.5em 1em;
   background-color: #423E63;
   margin-bottom: 1em !important;
 }
 
-main #view-page article img {
+main #view-page .element img {
   pointer-events: none;
   display: block;
   margin-left: auto;
@@ -226,10 +195,73 @@ main #view-page article img {
   max-height: 15em;
 }
 
+main #add-page form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #add-page form label {
+  font-weight: bold;
+}
+
+main #add-page form input[type="submit"] {
+  background-color: #423E63;
+}
+
+main #add-page form input[type="submit"]:hover, main #add-page form input[type="submit"]:focus {
+  background-color: #35334d;
+  cursor: pointer;
+}
+
+main #add-page form .input-container {
+  margin: auto;
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  main #add-page form .input-container {
+    width: 30%;
+  }
+}
+
+main #add-page form #media-container {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+main #add-page form #media-container h1 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+main #add-page form #media-container i {
+  float: right;
+  margin: 0 1em 0.5em 0;
+}
+
+main #add-page form #media-container #media-table {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+main #add-page form #media-container #media-table td {
+  height: 0.4em;
+}
+
+main #add-page form #media-container #media-table input {
+  margin-bottom: 0em;
+}
+
 main i {
-  position: fixed;
-  bottom: 0.7em;
-  right: 0.7em;
   border-radius: 50%;
   color: #FFFFFF;
 }
@@ -240,7 +272,54 @@ main i:hover, main i:focus {
   color: #AAAAAA;
 }
 
+main .add-top-btn {
+  position: fixed;
+  bottom: 0.7em;
+  right: 0.7em;
+}
+
+main input {
+  border-radius: 0.3em;
+  background-color: rgba(66, 62, 99, 0.3);
+  width: 100%;
+  padding: 0.4em;
+  margin-bottom: 1em;
+  border: none;
+  color: #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main input::-webkit-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main input:-ms-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main input::-ms-input-placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main input::placeholder {
+  text-align: center;
+  color: #AAAAAA;
+}
+
+main input:focus {
+  outline: 0.1em solid #423E63;
+}
+
 main .hidden {
   display: none;
+}
+
+main .disabled {
+  background-color: #AAAAAA;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */

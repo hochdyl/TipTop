@@ -49,28 +49,55 @@
             <section id='tops-page' class="hidden page">
                 <input type="text" placeholder="Rechercher" id="searchBar">
                 <h1>Liste des tops</h1>
-                <i class="fas fa-plus-circle fa-4x add-btn"></i>
-                <section id='tops-container' class="reload">
-                    <!-- js/generator.js fills this container with an api call -->
-                </section>
+                <i class="fas fa-plus-circle fa-4x add-top-btn"></i>
+                <div id='tops-container' class="reload">
+                    <!-- js/templates.js fills this container with an api call -->
+                </div>
             </section>
             <section id='view-page' class="hidden page">
-                <section id='view-container' class="reload">
-                    <!-- js/generator.js fills this container with an api call -->
-                </section>
+                <div id='view-container' class="reload">
+                    <!-- js/templates.js fills this container with an api call -->
+                </div>
             </section>
             <section id='add-page' class="hidden page">
-                <section id='add-container' class="reload">
-                    test wlh
-                    <!-- js/generator.js fills this container with an api call -->
-                </section>
+                <form>
+                    <div class="input-container">
+                        <label for="titre">Titre</label>
+                        <input type="text" placeholder="Titre" id="titre" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="description">Description</label>
+                        <input type="text" placeholder="Description" id="description">
+                    </div>
+                    <div class="input-container">
+                        <label for="auteur">Auteur</label>
+                        <input type="text" placeholder="Auteur" id="auteur" required>
+                    </div>
+                
+                    <div id="media-container">
+                        <h1>Votre classement</h1>
+                        <i class="fas fa-minus-circle fa-2x row-btn" id="delRow"></i>
+                        <i class="fas fa-plus-circle fa-2x row-btn" id="addRow"></i>
+                        <table id="media-table">
+                            <tbody>
+                                <tr data-row-number="1">
+                                    <td>#1</td>
+                                    <td><input type="text" placeholder="Titre" required></td>
+                                    <td><input type="file"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <input type="submit" value="Valider">
+                </form>
             </section>
     
             <script type="text/javascript" src="cordova.js"></script>
             <script type="text/javascript" src="js/index.js"></script>
             <script type="text/javascript" src="js/native.js"></script>
             <script type="text/javascript" src="js/api.js"></script>
-            <script type="text/javascript" src="js/generator.js"></script>
+            <script type="text/javascript" src="js/templates.js"></script>
             <script type="text/javascript" src="js/app.js"></script>
         </main>
     </body>

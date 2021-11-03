@@ -11,7 +11,7 @@ const CACHED_FILES = [
   `${ORIGIN_URL}/js/index.js`,
   `${ORIGIN_URL}/js/api.js`,
   `${ORIGIN_URL}/js/app.js`,
-  `${ORIGIN_URL}/js/generator.js`,
+  `${ORIGIN_URL}/js/templates.js`,
   `${ORIGIN_URL}/js/header.js`,
   `${ORIGIN_URL}/js/native.js`,
   `${ORIGIN_URL}/img/logo.png`,

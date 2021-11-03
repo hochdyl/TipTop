@@ -2,6 +2,8 @@
 @import "colors";
 @import "keyframes";
 
+* { transition: 0.3s;}
+
 body { background-color: $bgd-color !important; color: #FFFFFF !important; }
 
 h1 { font-size: calc(0.7rem + 1.5vw) !important; }
@@ -41,22 +43,9 @@ main {
     }
         
     #tops-page {
-        input {
-            border-radius: 0.3em;
-            background-color: rgba($scd-color, 0.3);
-            width: 100%;
-            padding: 1em;
-            margin-bottom: 1em;
-            border: none;
-            color: #FFFFFF;
-            box-sizing: border-box;
-            &::placeholder { text-align: center; color: #AAAAAA; }
-            &:focus { outline: 0.1em solid $scd-color; }
-        }
-
         h1 { text-align: center; }
 
-        article {
+        .top {
             padding: 1em;
             background-color: $scd-color;
             border-radius: 0.3em;
@@ -85,7 +74,7 @@ main {
 
         h2 { font-size: calc(0.5rem + .9vw) !important; margin-bottom: 0 !important; }
 
-        article {
+        .element {
             padding: 1em;
             background-color: $fst-color;
             border-radius: 0 0 0.5em 0.5em;
@@ -108,14 +97,68 @@ main {
         }
     }
 
+    #add-page {
+        form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            label { font-weight: bold; }
+
+            input[type="submit"] { 
+                background-color: $scd-color;
+                &:hover, &:focus { background-color: $trd-color; cursor: pointer; }
+            }
+
+            .input-container { 
+                margin: auto;
+                width: 100%;
+                @include md() { width: 30%; }
+            }
+
+            #media-container {
+                width: 100%;
+                display: block;
+                position: relative;
+
+                h1 { display: inline-block; margin-bottom: 0;}
+
+                i { float: right; margin: 0 1em 0.5em 0; }
+
+                #media-table {
+                    width: 100%;
+                    margin-bottom: 1em;
+
+                    td { height: 0.4em; }
+                    
+                    input { margin-bottom: 0em; }
+                }
+            }
+        }
+    }
+
     i {
-        position: fixed;
-        bottom: 0.7em;
-        right: 0.7em;
         border-radius: 50%;
         color: #FFFFFF;
         &:hover, &:focus { animation: pulse 0.8s; color: #AAAAAA; }
     }
 
+    .add-top-btn { position: fixed; bottom: 0.7em; right: 0.7em; }
+
+    input {
+        border-radius: 0.3em;
+        background-color: rgba($scd-color, 0.3);
+        width: 100%;
+        padding: 0.4em;
+        margin-bottom: 1em;
+        border: none;
+        color: #FFFFFF;
+        box-sizing: border-box;
+        &::placeholder { text-align: center; color: #AAAAAA; }
+        &:focus { outline: 0.1em solid $scd-color; }
+    }
+
     .hidden { display: none; }
+
+    .disabled { background-color: #AAAAAA; pointer-events: none; }
 }
