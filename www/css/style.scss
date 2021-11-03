@@ -32,7 +32,7 @@ main {
         }
     }
 
-    section {
+    .page {
         padding: 4em 2em 2em 2em;
         @include sm { padding: 4em 5em 2em 5em; }
         @include md { padding: 4em 7em 2em 7em; }

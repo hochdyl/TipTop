@@ -73,30 +73,30 @@ main nav span:hover {
   color: #AAAAAA;
 }
 
-main section {
+main .page {
   padding: 4em 2em 2em 2em;
 }
 
 @media (min-width: 36em) {
-  main section {
+  main .page {
     padding: 4em 5em 2em 5em;
   }
 }
 
 @media (min-width: 48em) {
-  main section {
+  main .page {
     padding: 4em 7em 2em 7em;
   }
 }
 
 @media (min-width: 62em) {
-  main section {
+  main .page {
     padding: 4em 15em 2em 15em;
   }
 }
 
 @media (min-width: 75em) {
-  main section {
+  main .page {
     padding: 4em 25em 2em 25em;
   }
 }

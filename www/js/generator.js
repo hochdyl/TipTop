@@ -6,8 +6,8 @@ const htmlToElement = (html) => {
 };
 
 const topsPage = (tops) => {
-  const container = document.getElementById("tops-page");
-  getTemplate("tops/top.html", function(template) {
+  const container = document.getElementById("tops-container");
+  getTemplate("tops/top.html", (template) => {
     tops.forEach((top) => {
       let templateFilled = template
         .replace("{id}", top.id)
@@ -17,7 +17,7 @@ const topsPage = (tops) => {
         .replace("{created_at}", top.created_at)
       container.appendChild(htmlToElement(templateFilled));
     });
-  })
+  });
 };
 
 const viewPage = (tops, topId) => {
@@ -26,7 +26,7 @@ const viewPage = (tops, topId) => {
     if (element.id == topId) top = element;
   });
   const container = document.getElementById("view-page");
-  getTemplate("view/header.html", function(template) {
+  getTemplate("view/header.html", (template) => {
     let templateFilled = template
       .replace("{title}", top.title)
       .replace("{description}", top.description)
@@ -34,7 +34,7 @@ const viewPage = (tops, topId) => {
       .replace("{created_at}", top.created_at)
     container.appendChild(htmlToElement(templateFilled));
   });
-  getTemplate("view/element.html", function(template) {
+  getTemplate("view/element.html", (template) => {
     top.list.forEach((element, i) => {
       let templateFilled = template
         .replace("{position}", element.position)
@@ -42,5 +42,5 @@ const viewPage = (tops, topId) => {
         .replace("{file}", `${top.id}/${element.file}`)
       container.appendChild(htmlToElement(templateFilled));
     });
-  })
+  });
 };

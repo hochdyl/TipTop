@@ -11,10 +11,10 @@ APP = (() => {
 
   const loadReady = () => {
     pages[currPage].removeClass("hidden");
-    searchBar();
     
     getTops((tops) => {
       topsPage(tops);
+      searchBar();
       
       $(document).on("click", ".top", function() {
           changePage(1);
@@ -35,16 +35,16 @@ APP = (() => {
   const changePage = (pageKey) => {
     pages.forEach(page => {
       page.addClass("hidden");
-      page.empty();
+      page.find('.reload').empty();
     });
     pages[pageKey].removeClass("hidden");
   };
 
   const searchBar = () => {
-    let input = $("#tops-page input");
-    input.on("keyup", () => { 
+    let input = $("#searchBar");
+    input.on("keyup", function() { 
       filter = input[0].value.toUpperCase();
-      article = $('#tops-page').find("article");
+      article = $('#tops-container').find("article");
       for (i = 0; i < article.length; i++) {
         $(article[i]).children().each((key, value) => {
           text = $(value).text();
