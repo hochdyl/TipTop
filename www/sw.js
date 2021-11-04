@@ -15,6 +15,7 @@ const CACHED_FILES = [
   `${ORIGIN_URL}/js/header.js`,
   `${ORIGIN_URL}/js/native.js`,
   `${ORIGIN_URL}/img/logo.png`,
+  `${ORIGIN_URL}/img/offline.gif`,
 ];
 
 const sendOfflinePage = (resolve) => {

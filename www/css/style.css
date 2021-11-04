@@ -38,9 +38,7 @@ main nav {
   z-index: 1;
   padding: 0.5em 1em;
   background-color: #2E2E38;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -55,6 +53,10 @@ main nav {
         -ms-flex-pack: start;
             justify-content: start;
   }
+}
+
+main nav img {
+  max-height: 100%;
 }
 
 main nav span:hover, main nav img:hover {
@@ -235,7 +237,6 @@ main #add-page form .input-container {
 main #add-page form #media-container {
   width: 100%;
   display: block;
-  position: relative;
 }
 
 main #add-page form #media-container h1 {
@@ -278,7 +279,7 @@ main .add-top-btn {
   right: 0.7em;
 }
 
-main input {
+main input, main button {
   border-radius: 0.3em;
   background-color: rgba(66, 62, 99, 0.3);
   width: 100%;
@@ -290,27 +291,27 @@ main input {
           box-sizing: border-box;
 }
 
-main input::-webkit-input-placeholder {
+main input::-webkit-input-placeholder, main button::-webkit-input-placeholder {
   text-align: center;
   color: #AAAAAA;
 }
 
-main input:-ms-input-placeholder {
+main input:-ms-input-placeholder, main button:-ms-input-placeholder {
   text-align: center;
   color: #AAAAAA;
 }
 
-main input::-ms-input-placeholder {
+main input::-ms-input-placeholder, main button::-ms-input-placeholder {
   text-align: center;
   color: #AAAAAA;
 }
 
-main input::placeholder {
+main input::placeholder, main button::placeholder {
   text-align: center;
   color: #AAAAAA;
 }
 
-main input:focus {
+main input:focus, main button:focus {
   outline: 0.1em solid #423E63;
 }
 
@@ -321,5 +322,18 @@ main .hidden {
 main .disabled {
   background-color: #AAAAAA;
   pointer-events: none;
+}
+
+main .offline {
+  background-color: #741515;
+}
+
+main .offline .offline-span {
+  float: right;
+}
+
+main .offline .offline-span:hover {
+  color: inherit;
+  cursor: inherit;
 }
 /*# sourceMappingURL=style.css.map */

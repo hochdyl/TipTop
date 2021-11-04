@@ -4,13 +4,13 @@ APP = (() => {
   const topLengthLimit = 5;
   const init = () => {
     if ("cordova" in window) {
-      document.addEventListener("deviceready", loadReady());
+      document.addEventListener("deviceready", loadComplete());
     } else {
-      document.addEventListener("DOMContentLoaded", loadReady());
+      document.addEventListener("DOMContentLoaded", loadComplete());
     }
   };
 
-  const loadReady = () => {
+  const loadComplete = () => {
     pages[currPage].removeClass("hidden");
 
     addLocalStorage("cached_tops").then(() => {
@@ -33,6 +33,8 @@ APP = (() => {
         changePage(0);
         buildTopsPage(tops);
       });
+    }).catch(() => {
+      console.log('error');
     });
   };
 

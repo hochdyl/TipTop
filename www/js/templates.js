@@ -1,5 +1,7 @@
+let template = ``;
+
 const htmlToElement = (html) => {
-  const template = document.createElement("template");
+  let template = document.createElement("template");
   html = html.trim(); // Never return a text node of whitespace as the result
   template.innerHTML = html;
   return template.content.firstChild;
@@ -7,16 +9,22 @@ const htmlToElement = (html) => {
 
 const buildTopsPage = (tops) => {
   const container = document.getElementById("tops-container");
-  getTemplate("tops/top.html").then((template) => {
-    tops.forEach((top) => {
-      let templateFilled = template
-        .replace("{id}", top.id)
-        .replace("{title}", top.title)
-        .replace("{description}", top.description)
-        .replace("{author}", top.author)
-        .replace("{created_at}", top.created_at)
-      container.appendChild(htmlToElement(templateFilled));
-    });
+  template = `
+  <div class="top" data-top-id="{id}">
+    <h2>{title}</h2>
+    <h3>{description}</h3>
+    <h3>Par {author} le {created_at}</h3>
+  </div>
+  `;
+
+  tops.forEach((top) => {
+    let templateFilled = template
+      .replace("{id}", top.id)
+      .replace("{title}", top.title)
+      .replace("{description}", top.description)
+      .replace("{author}", top.author)
+      .replace("{created_at}", top.created_at)
+    container.appendChild(htmlToElement(templateFilled));
   });
 };
 
@@ -26,20 +34,37 @@ const buildViewPage = (tops, topId) => {
     if (element.id == topId) top = element;
   });
   const container = document.getElementById("view-container");
-  getTemplate("view/header.html").then((template) => {
-    let templateFilled = template
-      .replace("{title}", top.title)
-      .replace("{description}", top.description)
-      .replace("{author}", top.author)
-      .replace("{created_at}", top.created_at)
-    container.appendChild(htmlToElement(templateFilled));
-  });
-  getTemplate("view/element.html").then((template) => {
+  template = `
+  <header>
+    <h1>{title}</h1>
+    <h2>{description}</h2>
+    <h2>Par {author} le {created_at}</h2>
+  </header>
+  `;
+
+  let templateFilled = template
+    .replace("{title}", top.title)
+    .replace("{description}", top.description)
+    .replace("{author}", top.author)
+    .replace("{created_at}", top.created_at)
+  container.appendChild(htmlToElement(templateFilled));
+
+  template = `
+  <div class="element">
+    <h2>#{position} - {name}</h2>
+    <img src="{file}">
+  </div>
+  `;
+
+  caches.open('offline').then((cache) => {
     top.list.forEach((element, i) => {
-      let templateFilled = template
-        .replace("{position}", element.position)
-        .replace("{name}", element.name)
-        .replace("{file}", `${top.id}/${element.file}`)
+      imageSrc = `img/${top.id}/${element.file}`;
+        // cache.add(imageSrc);
+
+        let templateFilled = template
+          .replace("{position}", element.position)
+          .replace("{name}", element.name)
+          .replace("{file}", `img/${top.id}/${element.file}`)
       container.appendChild(htmlToElement(templateFilled));
     });
   });
@@ -47,10 +72,16 @@ const buildViewPage = (tops, topId) => {
 
 const addMediaRow = (row) => {
   const container = $("#media-table tbody").last()[0];
-  getTemplate("add/media-row.html").then((template) => {
-    let templateFilled = template
-      .replace("{row}", row)
-      .replace("{row}", row)
-    container.appendChild(htmlToElement(templateFilled));
-  });
+  template = `
+  <tr data-row-number="{row}">
+    <td>#{row}</td>
+    <td><input type="text" placeholder="Titre" required></td>
+    <td><input type="file"></td>
+  </tr>
+  `;
+
+  let templateFilled = template
+    .replace("{row}", row)
+    .replace("{row}", row)
+  container.appendChild(htmlToElement(templateFilled));
 };
