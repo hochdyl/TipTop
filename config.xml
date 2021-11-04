@@ -16,10 +16,18 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
+        <preference name="StatusBarBackgroundColor" value="#2E2E38" />
+        <splash src="www/img/logo.png" density="port-ldpi" />
+
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="windows">
+        <splash src="www/img/logo.png" target="SplashScreen"/>
+        <splash src="www/img/logo.png" target="SplashScreenPhone"/>
+    </platform>
+    <preference name="SplashScreenDelay" value="1000" />
 </widget>

@@ -4,9 +4,11 @@ const loadNative = () => {
   document.addEventListener("online", onOnline, false);
 
   function onOffline() {
+    navigator.vibrate(300)
     visualUpdate('offline', 'Vous êtes hors-ligne');
   }
   function onOnline() {
+    navigator.vibrate(300)
     visualUpdate('online', 'Vous êtes en ligne');
   }
   function visualUpdate(status, text) {

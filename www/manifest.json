@@ -1,39 +1,39 @@
 {
-    "name": "TipTop",
-    "short_name": "TipTop",
-    "description": "Créer vos top n'a jamais été aussi simple !",
-    "lang": "fr",
-    "orientation": "portrait-primary",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#f4f4f4",
-    "theme_color": "#f4f4f4",
-    "icons": [
-      {
-        "src": "img/logo-50.png",
-        "sizes": "50x50",
-        "type": "image/png"
-      },
-      {
-        "src": "img/logo-56.png",
-        "sizes": "56x56",
-        "type": "image/png"
-      },
-      {
-        "src": "img/logo-144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-      },
-      {
-        "src": "img/logo.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "related_applications": [
-      {
-        "platform": "web"
-      }
-    ]
-  }
+  "name": "TipTop",
+  "short_name": "TipTop",
+  "description": "Créer vos top n'a jamais été aussi simple !",
+  "lang": "fr",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f4f4",
+  "theme_color": "#f4f4f4",
+  "icons": [
+    {
+      "src": "img/logo-50.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-56.png",
+      "sizes": "56x56",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
+}
   
