@@ -11,9 +11,14 @@ var load = {
           .then(function (reg) {});
       }
     }
+  },
+  onesignal: function() {
+
+
   }
 };
 
 window.addEventListener("load", () => {
   load.sw();
+  load.onesignal();
 })

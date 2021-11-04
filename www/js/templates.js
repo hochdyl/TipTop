@@ -8,8 +8,9 @@ const htmlToElement = (html) => {
 };
 
 const buildTopsPage = (tops) => {
-  if(device.platform != "browser") tops = JSON.parse(tops);
-
+  if("cordova" in window) {
+    if(device.platform != "browser") tops = JSON.parse(tops);
+  }
   const container = document.getElementById("tops-container");
   template = `
   <div class="top" data-top-id="{id}">
@@ -31,8 +32,9 @@ const buildTopsPage = (tops) => {
 };
 
 const buildViewPage = (tops, topId) => {
-  if(device.platform != "browser") tops = JSON.parse(tops);
-
+  if("cordova" in window) {
+    if(device.platform != "browser") tops = JSON.parse(tops);
+  }
   let top;
   tops.forEach(element => {
     if (element.id == topId) top = element;
@@ -60,9 +62,6 @@ const buildViewPage = (tops, topId) => {
   </div>
   `;
 
-  // caches.open(CACHE_NAME).then((cache) => {
-  //   cache.add(`${location.protocol}//${location.host}/img/${top.id}/${element.file}`);
-  // });
   top.list.forEach((element, i) => {
     let templateFilled = template
       .replace("{position}", element.position)
