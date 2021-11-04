@@ -2,10 +2,10 @@
 <widget id="com.tiptop" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TipTop</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Créer vos top n'a jamais été aussi simple !
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="dylan.hochet@ynov.com" href="http://cordova.io">
+        Dylan HOCHET
     </author>
     <content src="index.html" />
     <access origin="*" />

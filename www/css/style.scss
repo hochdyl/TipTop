@@ -159,12 +159,22 @@ main {
         &:focus { outline: 0.1em solid $scd-color; }
     }
 
+    .notification {
+        text-align: center;
+        padding: 1em;
+        z-index: 2;
+        position: fixed;
+        bottom: 0;
+        left: 0; 
+        right: 0;       
+    }
+
     .hidden { display: none; }
 
     .disabled { background-color: #AAAAAA; pointer-events: none; }
 
     .offline { 
-        background-color: #741515; 
+        background-color: #551616; 
 
         .offline-span { 
             float: right; 
@@ -172,4 +182,6 @@ main {
             &:hover { color: inherit; cursor: inherit; }
         }
     }
+
+    .online { background-color: #244415; }
 }

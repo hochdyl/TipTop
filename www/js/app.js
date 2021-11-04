@@ -4,9 +4,9 @@ APP = (() => {
   const topLengthLimit = 5;
   const init = () => {
     if ("cordova" in window) {
-      document.addEventListener("deviceready", loadComplete());
+      document.addEventListener("deviceready", loadComplete);
     } else {
-      document.addEventListener("DOMContentLoaded", loadComplete());
+      document.addEventListener("DOMContentLoaded", loadComplete);
     }
   };
 
@@ -33,8 +33,6 @@ APP = (() => {
         changePage(0);
         buildTopsPage(tops);
       });
-    }).catch(() => {
-      console.log('error');
     });
   };
 

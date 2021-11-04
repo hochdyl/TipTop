@@ -315,6 +315,16 @@ main input:focus, main button:focus {
   outline: 0.1em solid #423E63;
 }
 
+main .notification {
+  text-align: center;
+  padding: 1em;
+  z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 main .hidden {
   display: none;
 }
@@ -325,7 +335,7 @@ main .disabled {
 }
 
 main .offline {
-  background-color: #741515;
+  background-color: #551616;
 }
 
 main .offline .offline-span {
@@ -335,5 +345,9 @@ main .offline .offline-span {
 main .offline .offline-span:hover {
   color: inherit;
   cursor: inherit;
+}
+
+main .online {
+  background-color: #244415;
 }
 /*# sourceMappingURL=style.css.map */

@@ -56,17 +56,12 @@ const buildViewPage = (tops, topId) => {
   </div>
   `;
 
-  caches.open('offline').then((cache) => {
-    top.list.forEach((element, i) => {
-      imageSrc = `img/${top.id}/${element.file}`;
-        // cache.add(imageSrc);
-
-        let templateFilled = template
-          .replace("{position}", element.position)
-          .replace("{name}", element.name)
-          .replace("{file}", `img/${top.id}/${element.file}`)
-      container.appendChild(htmlToElement(templateFilled));
-    });
+  top.list.forEach((element, i) => {
+    let templateFilled = template
+      .replace("{position}", element.position)
+      .replace("{name}", element.name)
+      .replace("{file}", `img/${top.id}/${element.file}`)
+    container.appendChild(htmlToElement(templateFilled));
   });
 };
 
