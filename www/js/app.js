@@ -12,8 +12,10 @@ APP = (() => {
 
   const loadReady = () => {
     pages[currPage].removeClass("hidden");
-    
-    getTops((tops) => {
+
+    addLocalStorage("cached_tops").then(() => {
+      tops = getLocalStorage("cached_tops");
+
       buildTopsPage(tops);
       addTopMedia();
       searchBar();
